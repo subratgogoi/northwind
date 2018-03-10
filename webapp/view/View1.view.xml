@@ -2,8 +2,23 @@
 	displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
+			<Page title="First View">
+				<content>
+					<Button text="Load Data"
+							press="onLoad">
+						
+					</Button>
+					<List id="employeeList" headerText="Customer" items="{northwindSource>/Customers}">
+					    <items>
+					     <StandardListItem
+						      title="{northwindSource>CompanyName}"
+						      iconDensityAware="false"
+						      iconInset="false"
+						      type="Navigation"
+						      press="onListItemPressed"/>
+					    </items>
+					 </List>
+				</content>
 			</Page>
 		</pages>
 	</App>
